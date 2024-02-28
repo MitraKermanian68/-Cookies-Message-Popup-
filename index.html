@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Message Popup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body><!----- onload="showModal()" ----->
+    <div id="modalbox">
+      <img src="./images/cookie.png" class="cookies"/>
+      <p>We use cookies to ensure you get the best experience on our website</p>
+      <button type="button">Accept</button>
+      <!-- onclick="closeModal()" -->
+      <img src="./images/closeIcon.png" class="closeIcon"/>
+      <!-- onclick="closeModal()" -->
+    </div>
+
+    <script>
+        let modalBox = document.getElementById("modalbox");
+        let closeIcon = document.querySelector(".closeIcon");
+        let acceptBtn = document.querySelector("button");
+
+        // function closeModal(){
+            // modalBox.style.display = "none";
+        // }
+        closeIcon.addEventListener("click", () => {
+            modalBox.style.display = "none";
+        })
+
+        acceptBtn.addEventListener("click", () => {
+            modalBox.style.display = "none";
+        })
+
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                modalBox.style.display = "block";
+            },3000);
+        })
+        // function showModal(){
+            // setTimeout(() => {
+                // modalBox.style.display = "block";
+            // },1000);
+        // }
+
+        // window.onload = () => {
+            // setTimeout(() => {
+                // modalBox.style.display = "block";
+            // },1000);
+        // }
+    </script>
+  </body>
+</html>
